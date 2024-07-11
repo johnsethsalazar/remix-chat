@@ -1,6 +1,26 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
+client_id = "f4ac53ed8f30b07830a3bfadf91ec274"
+name = "remix-chat"
+handle = "remix-chat-108"
+application_url = "https://doubt-approach-currency-auction.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "ohsolutionsdevstore1.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://doubt-approach-currency-auction.trycloudflare.com/auth/callback",
+  "https://doubt-approach-currency-auction.trycloudflare.com/auth/shopify/callback",
+  "https://doubt-approach-currency-auction.trycloudflare.com/api/auth/callback"
+]
 
 [webhooks]
 api_version = "2024-07"
@@ -8,3 +28,6 @@ api_version = "2024-07"
   [[webhooks.subscriptions]]
   topics = [ "app/uninstalled" ]
   uri = "/webhooks"
+
+[pos]
+embedded = false
