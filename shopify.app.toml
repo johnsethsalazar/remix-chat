@@ -3,7 +3,7 @@
 client_id = "f4ac53ed8f30b07830a3bfadf91ec274"
 name = "remix-chat"
 handle = "remix-chat-108"
-application_url = "https://incorrect-telecharger-deals-sampling.trycloudflare.com"
+application_url = "https://conflict-discussion-varied-wrote.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://incorrect-telecharger-deals-sampling.trycloudflare.com/auth/callback",
-  "https://incorrect-telecharger-deals-sampling.trycloudflare.com/auth/shopify/callback",
-  "https://incorrect-telecharger-deals-sampling.trycloudflare.com/api/auth/callback"
+  "https://conflict-discussion-varied-wrote.trycloudflare.com/auth/callback",
+  "https://conflict-discussion-varied-wrote.trycloudflare.com/auth/shopify/callback",
+  "https://conflict-discussion-varied-wrote.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
