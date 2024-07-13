@@ -1,4 +1,5 @@
 import { LoaderFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 import { Card, Layout, Page } from "@shopify/polaris";
 import { apiVersion, authenticate } from "~/shopify.server";
 
@@ -57,6 +58,9 @@ export const loader: LoaderFunction = async ({ request }) => {
 };
 
 const Collections = () => {
+  // working on collections. Using loader function by using remix hook use loader data
+  const collections: any = useLoaderData();
+  console.log(collections, 'collections');
   return (
     <Page>
       <Layout>
