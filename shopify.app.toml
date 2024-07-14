@@ -3,7 +3,7 @@
 client_id = "f4ac53ed8f30b07830a3bfadf91ec274"
 name = "remix-chat"
 handle = "remix-chat-108"
-application_url = "https://conflict-discussion-varied-wrote.trycloudflare.com"
+application_url = "https://safely-prisoners-architects-have.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://conflict-discussion-varied-wrote.trycloudflare.com/auth/callback",
-  "https://conflict-discussion-varied-wrote.trycloudflare.com/auth/shopify/callback",
-  "https://conflict-discussion-varied-wrote.trycloudflare.com/api/auth/callback"
+  "https://safely-prisoners-architects-have.trycloudflare.com/auth/callback",
+  "https://safely-prisoners-architects-have.trycloudflare.com/auth/shopify/callback",
+  "https://safely-prisoners-architects-have.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

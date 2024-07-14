@@ -1,6 +1,6 @@
 import { LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import { Card, Layout, Page } from "@shopify/polaris";
+import { Card, Layout, List, Page } from "@shopify/polaris";
 import { apiVersion, authenticate } from "~/shopify.server";
 
 // Injecting Method query for the try body
@@ -67,6 +67,23 @@ const Collections = () => {
         <Layout.Section>
           <Card>
             <h1>Hello World!</h1>
+          </Card>
+        </Layout.Section>
+        <Layout.Section>
+          <Card>
+            <List type="bullet" gap="loose">
+              {
+                collections.map((edge: any) => {
+                  const {node: collecion} = edge;
+                  return (
+                    <List.Item key={collecion.id}>
+                      <h2>{collecion.title}</h2>
+                      <h2>{collecion.description}</h2>
+                    </List.Item>
+                  )
+                })
+              }
+            </List>
           </Card>
         </Layout.Section>
       </Layout>
