@@ -74,11 +74,11 @@ const Collections = () => {
             <List type="bullet" gap="loose">
               {
                 collections.map((edge: any) => {
-                  const {node: collecion} = edge;
+                  const {node: collection} = edge;
                   return (
-                    <List.Item key={collecion.id}>
-                      <h2>{collecion.title}</h2>
-                      <h2>{collecion.description}</h2>
+                    <List.Item key={collection.id}>
+                      <h2>{collection.title}</h2>
+                      <h2>{collection.description}</h2>
                     </List.Item>
                   )
                 })
