@@ -3,7 +3,7 @@
 client_id = "f4ac53ed8f30b07830a3bfadf91ec274"
 name = "remix-chat"
 handle = "remix-chat-108"
-application_url = "https://clearly-entrance-coaching-continental.trycloudflare.com"
+application_url = "https://delete-medline-chose-volvo.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_inventory,read_products,write_products"
 
 [auth]
 redirect_urls = [
-  "https://clearly-entrance-coaching-continental.trycloudflare.com/auth/callback",
-  "https://clearly-entrance-coaching-continental.trycloudflare.com/auth/shopify/callback",
-  "https://clearly-entrance-coaching-continental.trycloudflare.com/api/auth/callback"
+  "https://delete-medline-chose-volvo.trycloudflare.com/auth/callback",
+  "https://delete-medline-chose-volvo.trycloudflare.com/auth/shopify/callback",
+  "https://delete-medline-chose-volvo.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
