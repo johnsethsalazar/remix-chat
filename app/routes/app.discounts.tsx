@@ -1,17 +1,21 @@
 import { json, type ActionFunction } from "@remix-run/node";
 import { Form, useActionData, useSubmit } from "@remix-run/react";
-import { Button, Card, Page } from "@shopify/polaris";
+import { Button, Card, Page, TextField } from "@shopify/polaris";
+import { useState } from "react";
 import { authenticate } from "~/shopify.server";
 
 export const action: ActionFunction = async ({ request }) => {
   const { admin } = await authenticate.admin(request);
+  const formData = await request.formData();
 
+  const discountTitle = formData.get('discountTitle');
+  console.log(discountTitle, "discountTitle");
   try {
-    const dynamicTitle = "youTube example discounts";
+    const dynamicTitle = "youTube example discounts 2- active";
     const startsAt = "2022-06-21T00:00:00Z";
-    const endsAt = "2024-09-21T00:00:00Z";
+    const endsAt = "2025-09-21T00:00:00Z";
     const minimumRequirementSubtotal = 2;
-    const discountAmount = 100;
+    const discountAmount = 20;
 
     const response = await admin.graphql(
       `#graphql
@@ -99,6 +103,11 @@ export const action: ActionFunction = async ({ request }) => {
 };
 
 const Discounts = () => {
+
+  // The textfield is going to need the value and the set onchange values in order for the text fields from polaris to work.
+  // Without this and the value and onChange in the TextField tag, your couldn't input texts.
+  const [discountTitle, setDiscountTitle] = useState('');
+
   // submit function used to handle submission
   const submit = useSubmit();
   const actionData = useActionData<typeof action>();
@@ -118,6 +127,15 @@ const Discounts = () => {
     <Page>
       <Card>
         <Form onSubmit={generateDiscount} method="post">
+          <TextField
+            id="discountTitle"
+            name="discountTitle"
+            label="Title"
+            autoComplete="off"
+            value={discountTitle}
+            onChange={(value) => setDiscountTitle(value)}
+          />
+          <br />
           <Button submit>Create Discounts</Button>
         </Form>
       </Card>
