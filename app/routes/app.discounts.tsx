@@ -11,7 +11,6 @@ export const action: ActionFunction = async ({ request }) => {
   const discountTitle = formData.get('discountTitle');
   console.log(discountTitle, "discountTitle");
   try {
-    const dynamicTitle = "youTube example discounts 2- active";
     const startsAt = "2022-06-21T00:00:00Z";
     const endsAt = "2025-09-21T00:00:00Z";
     const minimumRequirementSubtotal = 2;
@@ -64,7 +63,7 @@ export const action: ActionFunction = async ({ request }) => {
       {
         variables: {
           automaticBasicDiscount: {
-            title: dynamicTitle,
+            title: discountTitle,
             startsAt,
             endsAt,
             minimumRequirement: {

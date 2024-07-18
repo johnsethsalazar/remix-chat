@@ -3,7 +3,7 @@
 client_id = "f4ac53ed8f30b07830a3bfadf91ec274"
 name = "remix-chat"
 handle = "remix-chat-108"
-application_url = "https://cycles-discipline-maritime-nirvana.trycloudflare.com"
+application_url = "https://llp-disagree-de-effects.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_inventory,read_products,write_discounts,write_products"
 
 [auth]
 redirect_urls = [
-  "https://cycles-discipline-maritime-nirvana.trycloudflare.com/auth/callback",
-  "https://cycles-discipline-maritime-nirvana.trycloudflare.com/auth/shopify/callback",
-  "https://cycles-discipline-maritime-nirvana.trycloudflare.com/api/auth/callback"
+  "https://llp-disagree-de-effects.trycloudflare.com/auth/callback",
+  "https://llp-disagree-de-effects.trycloudflare.com/auth/shopify/callback",
+  "https://llp-disagree-de-effects.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
