@@ -3,7 +3,7 @@
 client_id = "f4ac53ed8f30b07830a3bfadf91ec274"
 name = "remix-chat"
 handle = "remix-chat-108"
-application_url = "https://jacob-hugh-concern-double.trycloudflare.com"
+application_url = "https://podcast-announces-excess-minimal.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_inventory,read_products,write_customers,write_discounts,write_pro
 
 [auth]
 redirect_urls = [
-  "https://jacob-hugh-concern-double.trycloudflare.com/auth/callback",
-  "https://jacob-hugh-concern-double.trycloudflare.com/auth/shopify/callback",
-  "https://jacob-hugh-concern-double.trycloudflare.com/api/auth/callback"
+  "https://podcast-announces-excess-minimal.trycloudflare.com/auth/callback",
+  "https://podcast-announces-excess-minimal.trycloudflare.com/auth/shopify/callback",
+  "https://podcast-announces-excess-minimal.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
