@@ -80,11 +80,10 @@ export const action: ActionFunction = async ({ request }) => {
         data: data.data,
       });
     }
-
-    return null;
   } catch (error) {
     console.log(error);
   }
+  return null;
 };
 
 const Customers = () => {
