@@ -3,7 +3,7 @@
 client_id = "f4ac53ed8f30b07830a3bfadf91ec274"
 name = "remix-chat"
 handle = "remix-chat-108"
-application_url = "https://approaches-agreement-madagascar-limitation.trycloudflare.com"
+application_url = "https://stockings-endif-organize-syracuse.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_inventory,read_products,write_customers,write_discounts,write_pro
 
 [auth]
 redirect_urls = [
-  "https://approaches-agreement-madagascar-limitation.trycloudflare.com/auth/callback",
-  "https://approaches-agreement-madagascar-limitation.trycloudflare.com/auth/shopify/callback",
-  "https://approaches-agreement-madagascar-limitation.trycloudflare.com/api/auth/callback"
+  "https://stockings-endif-organize-syracuse.trycloudflare.com/auth/callback",
+  "https://stockings-endif-organize-syracuse.trycloudflare.com/auth/shopify/callback",
+  "https://stockings-endif-organize-syracuse.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
