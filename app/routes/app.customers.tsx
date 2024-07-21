@@ -46,7 +46,7 @@ export const action: ActionFunction = async ({ request }) => {
         variables: {
           input: {
             email: email,
-            phone: "+17066765434",
+            phone: "+17066765421",
             firstName: name,
             lastName: "tapia",
             addresses: [
@@ -80,10 +80,10 @@ export const action: ActionFunction = async ({ request }) => {
         data: data.data,
       });
     }
+    return null;
   } catch (error) {
     console.log(error);
   }
-  return null;
 };
 
 const Customers = () => {
