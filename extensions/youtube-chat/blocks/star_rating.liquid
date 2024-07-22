@@ -1,16 +1,112 @@
 {% assign avg_rating = block.settings.product.metafields.demo.avg_rating.value | round %}
-<span style="color:{{ block.settings.colour }}">
-  {% render 'stars', rating: avg_rating %}
-</span>
-{% if avg_rating >= 4 %}
-  <br>
-  <img src="{{ "thumbs-up.png" | asset_img_url: '15x' }}" height="15" width="15" loading="lazy">
-  {{ 'ratings.home.recommendationText' | t }}
-{% endif %}
+
+<style>
+  .main {
+    background-color: white;
+  }
+
+  .chat-widget-style {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #1e771a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .chat-widget-style:hover {
+    background-color: #0e335b;
+
+  }
+
+
+  .chat-window-style {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* remove in case */
+  }
+
+
+
+  .chat-content-style {
+    height: 80%;
+    overflow-y: auto;
+    padding: 20px;
+  }
+
+  .input-container-style {
+    padding: 10px;
+    display: flex;
+    border-top: 1px solid #ccc;
+  }
+
+  .message-input-style {
+    flex-grow: 1;
+    padding: 8px;
+    margin-right: 10px;
+  }
+
+  .send-button-style {
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+
+<div class="main">
+  <div
+    id="chat-widget"
+    class="chat-widget-style"
+    onclick="toggleChat()">
+    <span>Chat</span>
+  </div>
+  <div id="chat-window" class="chat-window-style">
+
+    <div id="chat-content" class="chat-content-style"></div>
+    <div id="input-container" class="input-container-style">
+      <input
+        type="text"
+        id="message-input"
+        placeholder="Type your message"
+        class="message-input-style">
+      <button
+        id="send-button"
+        class="send-button-style"
+        onclick="sendMessage()">Send</button>
+    </div>
+
+
+  </div>
+
+</div>
+
+<script>
+  function toggleChat() {
+    document.getElementById('chat-widget').classList.toggle('chat-widget-active')
+  }
+</script>
 
 {% schema %}
 {
-  "name": "Star Rating",
+  "name": "Remix Chat Widget",
   "target": "section",
   "settings": [
     { "type": "product", "id": "product", "label": "product", "autofill": true },
