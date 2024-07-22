@@ -6,6 +6,7 @@
   }
 
   .chat-widget-style {
+    z-index: 10000;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -100,7 +101,8 @@
 
 <script>
   function toggleChat() {
-    document.getElementById('chat-widget').classList.toggle('chat-widget-active')
+    const chatWindow = document.getElementById('chat-window')
+    chatWindow.style.display = chatWindow.style.display == 'none' ? 'block' : 'none'
   }
 </script>
 
