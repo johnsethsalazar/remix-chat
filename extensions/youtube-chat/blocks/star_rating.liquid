@@ -29,9 +29,10 @@
 
 
   .chat-window-style {
+    z-index: 10000;
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 85px;
     right: 20px;
     width: 300px;
     height: 400px;
@@ -86,24 +87,31 @@
       <input
         type="text"
         id="message-input"
-        placeholder="Type your message"
+        placeholder="Type your message for OH Solutions store"
         class="message-input-style">
       <button
         id="send-button"
         class="send-button-style"
         onclick="sendMessage()">Send</button>
     </div>
-
-
   </div>
-
 </div>
 
 <script>
   function toggleChat() {
-    const chatWindow = document.getElementById('chat-window')
-    chatWindow.style.display = chatWindow.style.display == 'none' ? 'block' : 'none'
+    const chatWindow = document.getElementById('chat-window');
+    chatWindow.style.display = chatWindow.style.display === 'none' || chatWindow.style.display === '' ? 'block' : 'none';
   }
+
+  // Click outside to close chat box / Click away popup function
+  document.addEventListener('click', function(event) {
+    const chatWindow = document.getElementById('chat-window');
+    const chatWidget = document.getElementById('chat-widget');
+
+    if (!chatWindow.contains(event.target) && !chatWidget.contains(event.target)) {
+      chatWindow.style.display = 'none';
+    }
+  });
 </script>
 
 {% schema %}
