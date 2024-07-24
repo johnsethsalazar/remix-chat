@@ -103,6 +103,40 @@
     chatWindow.style.display = chatWindow.style.display === 'none' || chatWindow.style.display === '' ? 'block' : 'none';
   }
 
+  function sendMessage() {
+    console.log('hit')
+    const inputElement = document.getElementById('message-input');
+    const message = inputElement.value;
+    console.log(message, 'message')
+
+    // Delete input field when send button is clicked or sent the message
+  if(message.trim() !== '') {
+    const chatContent = document.getElementById('chat-content');
+    const messageElement = document.createElement('div');
+    messageElement.textContent = message;
+    chatContent.appendChild(messageElement);
+    inputElement.value = '';
+  }
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        // Handle success
+        console.log('Success:', xhr.responseText);
+      } else {
+        // Handle error
+        console.error('Some error occcured. Error:', xhr.responseText);
+      }
+    };
+    xhr.onerror = function() {
+      console.log('Again another error')
+    }
+    xhr.send(JSON.stringify({ message }));
+    console.log(message, 'message')
+  }
+
   // Click outside to close chat box / Click away popup function
   document.addEventListener('click', function(event) {
     const chatWindow = document.getElementById('chat-window');

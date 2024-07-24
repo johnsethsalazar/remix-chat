@@ -3,7 +3,7 @@
 client_id = "f4ac53ed8f30b07830a3bfadf91ec274"
 name = "remix-chat"
 handle = "remix-chat-108"
-application_url = "https://wrapping-forum-download-championships.trycloudflare.com"
+application_url = "https://flush-lovely-beads-window.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_inventory,read_products,write_customers,write_discounts,write_pro
 
 [auth]
 redirect_urls = [
-  "https://wrapping-forum-download-championships.trycloudflare.com/auth/callback",
-  "https://wrapping-forum-download-championships.trycloudflare.com/auth/shopify/callback",
-  "https://wrapping-forum-download-championships.trycloudflare.com/api/auth/callback"
+  "https://flush-lovely-beads-window.trycloudflare.com/auth/callback",
+  "https://flush-lovely-beads-window.trycloudflare.com/auth/shopify/callback",
+  "https://flush-lovely-beads-window.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
