@@ -121,7 +121,7 @@
   }
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https', true);
+    xhr.open('POST', 'https://remix-chat-backend-3h7y.vercel.app/api/getAllMessages', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = function() {
       if (xhr.status === 200) {
