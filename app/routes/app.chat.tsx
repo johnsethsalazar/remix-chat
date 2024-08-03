@@ -1,9 +1,10 @@
+import { Card, Layout, Page } from "@shopify/polaris"
 import axios from "axios"
 import { useEffect, useState } from "react"
 
 interface Message {
   _id: string,
-  content: string
+  constent: string
 }
 
 const Chat = () => {
@@ -23,7 +24,34 @@ const Chat = () => {
   }, [])
 
   console.log('messages', messages)
-  return <div>Chat</div>
+  return (
+    <Page>
+      <Layout>
+        <Layout.Section>
+          <div>
+            <h1>Chat</h1>
+            {
+              messages.length > 0 ? (
+                <div>
+                  {
+                    messages.map((message: Message) => (
+                      <div key={message._id}>
+                        <Card>
+                          {message.constent}
+                        </Card>
+                      </div>
+                    ))
+                  }
+                </div>
+              ) : (
+                <h1>No messages found</h1>
+              )
+            }
+          </div>
+        </Layout.Section>
+      </Layout>
+    </Page>
+  )
 }
 
 export default Chat

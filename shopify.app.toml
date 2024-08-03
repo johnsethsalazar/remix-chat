@@ -3,7 +3,7 @@
 client_id = "f4ac53ed8f30b07830a3bfadf91ec274"
 name = "remix-chat"
 handle = "remix-chat-108"
-application_url = "https://pmid-stake-appeal-moderate.trycloudflare.com"
+application_url = "https://tells-normal-layers-resulting.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "read_inventory,read_products,write_customers,write_discounts,write_pro
 
 [auth]
 redirect_urls = [
-  "https://pmid-stake-appeal-moderate.trycloudflare.com/auth/callback",
-  "https://pmid-stake-appeal-moderate.trycloudflare.com/auth/shopify/callback",
-  "https://pmid-stake-appeal-moderate.trycloudflare.com/api/auth/callback"
+  "https://tells-normal-layers-resulting.trycloudflare.com/auth/callback",
+  "https://tells-normal-layers-resulting.trycloudflare.com/auth/shopify/callback",
+  "https://tells-normal-layers-resulting.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
